@@ -14,45 +14,38 @@ export default function HowItWorksBand({
   const h = t.page.howItWorks;
 
   const Tag = compact ? "div" : "section";
-  return (
-    <Tag
-      style={{
-        background,
-        padding: compact ? "0 0 28px" : "72px 0",
-        borderBottom: compact ? "none" : "1px solid #e4e4e7",
-      }}
-    >
-      <div className="container">
-        <AnimatedSection delay={0}>
-          <span className="label" style={{ display: "block", marginBottom: compact ? 8 : 16 }}>
-            {h.label}
-          </span>
-          <h2
-            style={{
-              fontWeight: 500,
-              letterSpacing: "-0.02em",
-              marginBottom: compact ? 6 : 12,
-              maxWidth: 560,
-              fontSize: compact ? "clamp(1.1rem, 2.2vw, 1.4rem)" : undefined,
-            }}
-          >
-            {h.h2}
-          </h2>
-          {!compact && (
-            <p style={{ fontSize: 15, color: "#71717a", marginBottom: 40, maxWidth: 560 }}>{h.sub}</p>
-          )}
-        </AnimatedSection>
-
-        <div
+  const body = (
+    <>
+      <AnimatedSection delay={0}>
+        <span className="label" style={{ display: "block", marginBottom: compact ? 8 : 16 }}>
+          {h.label}
+        </span>
+        <h2
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 0,
-            border: compact ? "1px solid #e4e4e7" : "1px solid #e4e4e7",
-            marginBottom: compact ? 0 : 0,
+            fontWeight: 500,
+            letterSpacing: "-0.02em",
+            marginBottom: compact ? 6 : 12,
+            maxWidth: compact ? "none" : 560,
+            fontSize: compact ? "clamp(1.1rem, 2.2vw, 1.4rem)" : undefined,
           }}
-          className="how-steps-grid"
         >
+          {h.h2}
+        </h2>
+        {!compact && (
+          <p style={{ fontSize: 15, color: "#71717a", marginBottom: 40, maxWidth: 560 }}>{h.sub}</p>
+        )}
+      </AnimatedSection>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 0,
+          border: "1px solid #e4e4e7",
+          width: "100%",
+        }}
+        className="how-steps-grid"
+      >
           {h.steps.map((step, i) => (
             <div
               key={i}
@@ -94,7 +87,22 @@ export default function HowItWorksBand({
             </div>
           ))}
         </div>
-      </div>
+    </>
+  );
+
+  return (
+    <Tag
+      style={{
+        background,
+        padding: compact ? "0" : "88px 0 96px",
+        borderBottom: compact ? "none" : "1px solid #e4e4e7",
+      }}
+    >
+      {compact ? (
+        <div style={{ width: "100%" }}>{body}</div>
+      ) : (
+        <div className="container">{body}</div>
+      )}
       <style>{`
         @media (max-width: 768px) {
           .how-steps-grid { grid-template-columns: 1fr !important; }

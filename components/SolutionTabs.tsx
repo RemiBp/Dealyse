@@ -21,7 +21,7 @@ export default function SolutionTabs() {
       <div className="container">
         <HowItWorksBand compact />
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 0, flexWrap: "wrap", gap: 16 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 56, flexWrap: "wrap", gap: 16 }}>
           <div>
             <span className="label" style={{ display: "block", marginBottom: 16 }}>{tabs.label}</span>
             <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", maxWidth: 520 }}>{tabs.h2}</h2>
