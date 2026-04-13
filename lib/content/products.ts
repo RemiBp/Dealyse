@@ -60,7 +60,7 @@ export const products: Product[] = [
       { title: "Benchmarks sectoriels", desc: "Comparaison automatique aux standards de l'industrie cible." },
       { title: "Rapport PDF one-click", desc: "Format professionnel prêt pour comité d'investissement." },
     ],
-    image: "/images/ui/carrier_allocation.png",
+    image: "/images/ui/motherbrain.png",
   },
   {
     slug: "deal-management",
@@ -81,7 +81,7 @@ export const products: Product[] = [
       { title: "Collaboration équipe", desc: "Attribution tâches, commentaires contextuels, mentions." },
       { title: "Alertes intelligentes", desc: "Notifications sur changements critiques, deadlines, inactivité." },
     ],
-    image: "/images/ui/network_opt.png",
+    image: "/images/ui/single_client_view.png",
   },
   {
     slug: "modelling",
@@ -123,7 +123,7 @@ export const products: Product[] = [
       { title: "Export multi-format", desc: "PDF, PowerPoint, Word, Excel — selon les préférences du comité." },
       { title: "Mise à jour continue", desc: "Rapport mis à jour automatiquement lors de nouvelles données." },
     ],
-    image: "/images/ui/single_client_view.png",
+    image: "/images/ui/network_opt.png",
   },
   {
     slug: "security",

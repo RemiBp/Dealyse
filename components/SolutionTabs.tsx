@@ -5,22 +5,15 @@ import Link from "next/link";
 import { products } from "@/lib/content/products";
 import { useLang } from "@/lib/i18n";
 
-const tabImages = [
-  "/images/ui/carrier_allocation.png",
-  "/images/ui/network_opt.png",
-  "/images/ui/agora_emissions.png",
-  "/images/ui/single_client_view.png",
-  "/images/ui/afc_alerting.png",
-];
-
-const tabSlugs = ["due-diligence", "deal-management", "modelling", "reporting", "security"];
+const tabSlugs = ["due-diligence", "deal-management", "modelling", "reporting", "security"] as const;
 
 export default function SolutionTabs() {
   const [active, setActive] = useState(0);
   const { t } = useLang();
   const tabs = t.page.tabs;
   const tab = tabs.items[active];
-  const product = products.find((p) => p.slug === tabSlugs[active])!;
+  const slug = tabSlugs[active];
+  const product = products.find((p) => p.slug === slug)!;
 
   return (
     <section style={{ background: "white", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
@@ -69,7 +62,7 @@ export default function SolutionTabs() {
           {/* Image left */}
           <div style={{ borderRight: "1px solid #e4e4e7", position: "relative", overflow: "hidden", minHeight: 360 }}>
             <Image
-              src={tabImages[active]}
+              src={product.image}
               alt={product.name}
               fill
               style={{ objectFit: "cover", filter: "grayscale(100%) contrast(1.05)", transition: "opacity 0.3s" }}
@@ -94,7 +87,7 @@ export default function SolutionTabs() {
               ))}
             </div>
 
-            <Link href={`/product/${tabSlugs[active]}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, color: "#001012", textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: "1px solid #001012", paddingBottom: 2 }}>
+            <Link href={`/product/${slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, color: "#001012", textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: "1px solid #001012", paddingBottom: 2 }}>
               {tabs.viewDetail} {product.name} {tabs.viewDetailSuffix}
             </Link>
           </div>
