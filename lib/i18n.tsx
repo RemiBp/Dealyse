@@ -24,7 +24,7 @@ const translations = {
         plainPitch:
           "La plateforme tout-en-un pour gérer vos deals M&A de A à Z — DD, LBO, IC memo, closing.",
         foundryHook:
-          "Construite sur Palantir Foundry : données en Europe, agents orchestrés, zéro fuite vers des API grand public.",
+          "Palantir Foundry, hébergé en Europe — infra de niveau grande organisation ; vos data rooms restent dans votre périmètre, sans passage par l’IA grand public.",
         ctaPrimary: "Voir la démo →",
         ctaSecondary: "Découvrir le produit",
         badges: ["Données souveraines", "4h DD complète", "Palantir Foundry", "Hébergé EU"],
@@ -322,7 +322,7 @@ const translations = {
         plainPitch:
           "The all-in-one platform to run your M&A deals end to end — DD, LBO, IC memo, closing.",
         foundryHook:
-          "Built on Palantir Foundry — data in Europe, orchestrated agents, no leakage to consumer APIs.",
+          "Palantir Foundry, hosted in Europe — enterprise-grade stack; your data rooms stay in your perimeter, never routed through consumer AI.",
         ctaPrimary: "See the demo →",
         ctaSecondary: "Explore the product",
         badges: ["Sovereign data", "4h full DD", "Palantir Foundry", "EU hosted"],
