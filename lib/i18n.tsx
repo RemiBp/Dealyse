@@ -21,10 +21,10 @@ const translations = {
         badge2: "AIP Logic",
         h1a: "Des semaines de travail.",
         h1b: "En quelques minutes.",
+        plainPitch:
+          "La plateforme tout-en-un pour gérer vos deals M&A de A à Z — DD, LBO, IC memo, closing.",
         foundryHook:
-          "Plateforme M&A sur Palantir Foundry — données souveraines en Europe, agents IA orchestrés, tout votre deal au même endroit.",
-        dealOsExplain:
-          "Un Deal OS, c'est le système qui relie data room, analyses, modèles, mémos et suivi : DEALYSE pilote l'ensemble de A à Z — DD, modélisation, IC memo, closing — en une fraction du temps habituel.",
+          "Construite sur Palantir Foundry : données en Europe, agents orchestrés, zéro fuite vers des API grand public.",
         ctaPrimary: "Voir la démo →",
         ctaSecondary: "Découvrir le produit",
         badges: ["Données souveraines", "4h DD complète", "Palantir Foundry", "Hébergé EU"],
@@ -56,8 +56,8 @@ const translations = {
           },
           {
             num: "03",
-            title: "Rapport structuré sous 4 heures",
-            desc: "Scores, red flags, annexes — prêt à être relu, challengé et présenté en comité.",
+            title: "Rapport + modèle sous 4 heures",
+            desc: "Rapport DD (scores, red flags) et LBO pré-rempli — prêts à être relus et présentés en comité.",
           },
         ],
       },
@@ -319,10 +319,10 @@ const translations = {
         badge2: "AIP Logic",
         h1a: "Weeks of work.",
         h1b: "In minutes.",
+        plainPitch:
+          "The all-in-one platform to run your M&A deals end to end — DD, LBO, IC memo, closing.",
         foundryHook:
-          "M&A platform on Palantir Foundry — sovereign data in Europe, orchestrated AI agents, your whole deal in one place.",
-        dealOsExplain:
-          "A Deal OS is the system that connects your data room, analysis, models, memos, and tracking: DEALYSE runs it end to end — DD, modelling, IC memo, closing — in a fraction of the usual time.",
+          "Built on Palantir Foundry — data in Europe, orchestrated agents, no leakage to consumer APIs.",
         ctaPrimary: "See the demo →",
         ctaSecondary: "Explore the product",
         badges: ["Sovereign data", "4h full DD", "Palantir Foundry", "EU hosted"],
@@ -354,8 +354,8 @@ const translations = {
           },
           {
             num: "03",
-            title: "Structured report within 4 hours",
-            desc: "Scores, red flags, appendices — ready to review, challenge, and present to the committee.",
+            title: "Report + model within 4 hours",
+            desc: "DD report (scores, red flags) and a pre-filled LBO — ready to review and take to committee.",
           },
         ],
       },

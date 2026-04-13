@@ -47,20 +47,20 @@ export default function Home() {
               <AnimatedSection delay={100}>
                 <p
                   style={{
-                    fontSize: "clamp(1rem, 1.75vw, 1.15rem)",
+                    fontSize: "clamp(1.05rem, 1.9vw, 1.2rem)",
                     color: "#001012",
-                    maxWidth: 600,
-                    lineHeight: 1.65,
-                    marginBottom: 16,
-                    fontWeight: 500,
+                    maxWidth: 620,
+                    lineHeight: 1.55,
+                    marginBottom: 14,
+                    fontWeight: 600,
                   }}
                 >
-                  {p.hero.foundryHook}
+                  {p.hero.plainPitch}
                 </p>
               </AnimatedSection>
-              <AnimatedSection delay={140}>
-                <p style={{ fontSize: "clamp(0.95rem, 1.65vw, 1.1rem)", color: "#71717a", maxWidth: 600, lineHeight: 1.7, marginBottom: 48, fontWeight: 400 }}>
-                  {p.hero.dealOsExplain}
+              <AnimatedSection delay={130}>
+                <p style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)", color: "#71717a", maxWidth: 620, lineHeight: 1.65, marginBottom: 48, fontWeight: 400 }}>
+                  {p.hero.foundryHook}
                 </p>
               </AnimatedSection>
 
