@@ -21,7 +21,10 @@ const translations = {
         badge2: "AIP Logic",
         h1a: "Des semaines de travail.",
         h1b: "En quelques minutes.",
-        sub: "Due diligence, pipeline et livrables — une seule couche sur Palantir Foundry, de l'origination au closing.",
+        foundryHook:
+          "Plateforme M&A sur Palantir Foundry — données souveraines en Europe, agents IA orchestrés, tout votre deal au même endroit.",
+        dealOsExplain:
+          "Un Deal OS, c'est le système qui relie data room, analyses, modèles, mémos et suivi : DEALYSE pilote l'ensemble de A à Z — DD, modélisation, IC memo, closing — en une fraction du temps habituel.",
         ctaPrimary: "Voir la démo →",
         ctaSecondary: "Découvrir le produit",
         badges: ["Données souveraines", "4h DD complète", "Palantir Foundry", "Hébergé EU"],
@@ -35,6 +38,28 @@ const translations = {
       proof: {
         label: "Utilisé par des équipes M&A en Europe",
         items: ["Fonds PE · €800M AUM", "Boutique M&A · Paris", "Cabinet d'avocats · 4 associés", "Direction M&A · Groupe CAC40", "IB · mid-market"],
+      },
+      howItWorks: {
+        label: "Comment ça marche",
+        h2: "Trois étapes. Ensuite, le rapport.",
+        sub: "Vous savez ce qui se passe entre l'upload et le comité — sans jargon produit.",
+        steps: [
+          {
+            num: "01",
+            title: "Uploadez votre data room",
+            desc: "ZIP, lien VDR ou dossier — PDF, Excel, Word, PowerPoint. Aucun paramétrage manuel.",
+          },
+          {
+            num: "02",
+            title: "4 agents IA analysent en parallèle",
+            desc: "Financier, juridique, opérationnel et synthèse — sur votre tenant, sans envoi vers des API grand public.",
+          },
+          {
+            num: "03",
+            title: "Rapport structuré sous 4 heures",
+            desc: "Scores, red flags, annexes — prêt à être relu, challengé et présenté en comité.",
+          },
+        ],
       },
       problem: {
         label: "Le problème",
@@ -54,6 +79,7 @@ const translations = {
       tabs: {
         label: "La solution",
         h2: "Un seul OS pour tout votre deal.",
+        intro: "Chaque module reprend le même flux : données centralisées, agents en parallèle, livrable prêt pour le comité.",
         cta: "Voir la démo →",
         viewDetail: "Voir",
         viewDetailSuffix: "en détail →",
@@ -135,6 +161,7 @@ const translations = {
       useCases: {
         label: "Use Cases",
         h2: "Résultats réels. Chiffrés.",
+        sub: "Cinq segments couverts — Private Equity, IB, M&A Advisors, Legal, Corporate.",
         link: "Tous les use cases →",
         cardCta: "Voir le détail →",
       },
@@ -176,13 +203,13 @@ const translations = {
       ctaFinal: {
         h2a: "Votre prochain deal.",
         h2b: "En quelques minutes.",
-        sub: "Démarrez avec un POC gratuit sur votre prochain deal. Résultats garantis en 4 heures.",
-        ctaPrimary: "Démarrer mon POC →",
+        sub: "Échangez 30 minutes avec l'équipe : démo adaptée à votre contexte, sans engagement.",
+        ctaPrimary: "Demander une démo de 30 minutes →",
         ctaSecondary: "Voir les use cases",
         stats: [
-          { value: "Gratuit", label: "Sur votre premier deal" },
-          { value: "4 heures", label: "Résultats garantis" },
-          { value: "24h", label: "Temps de réponse" },
+          { value: "30 min", label: "Démo personnalisée" },
+          { value: "4 heures", label: "Cible type pour une DD" },
+          { value: "24h", label: "Réponse équipe" },
         ],
       },
     },
@@ -292,7 +319,10 @@ const translations = {
         badge2: "AIP Logic",
         h1a: "Weeks of work.",
         h1b: "In minutes.",
-        sub: "Due diligence, pipeline, and deliverables — one layer on Palantir Foundry, from origination to closing.",
+        foundryHook:
+          "M&A platform on Palantir Foundry — sovereign data in Europe, orchestrated AI agents, your whole deal in one place.",
+        dealOsExplain:
+          "A Deal OS is the system that connects your data room, analysis, models, memos, and tracking: DEALYSE runs it end to end — DD, modelling, IC memo, closing — in a fraction of the usual time.",
         ctaPrimary: "See the demo →",
         ctaSecondary: "Explore the product",
         badges: ["Sovereign data", "4h full DD", "Palantir Foundry", "EU hosted"],
@@ -306,6 +336,28 @@ const translations = {
       proof: {
         label: "Used by M&A teams across Europe",
         items: ["PE Fund · €800M AUM", "M&A Boutique · Paris", "Law Firm · 4 partners", "M&A Division · CAC40 Group", "IB · mid-market"],
+      },
+      howItWorks: {
+        label: "How it works",
+        h2: "Three steps. Then the report.",
+        sub: "You always know what happens between upload and committee — without product jargon.",
+        steps: [
+          {
+            num: "01",
+            title: "Upload your data room",
+            desc: "ZIP, VDR link, or folder — PDF, Excel, Word, PowerPoint. No manual setup.",
+          },
+          {
+            num: "02",
+            title: "4 AI agents run in parallel",
+            desc: "Financial, legal, operational, and synthesis — on your tenant, not routed through consumer APIs.",
+          },
+          {
+            num: "03",
+            title: "Structured report within 4 hours",
+            desc: "Scores, red flags, appendices — ready to review, challenge, and present to the committee.",
+          },
+        ],
       },
       problem: {
         label: "The problem",
@@ -325,6 +377,7 @@ const translations = {
       tabs: {
         label: "The solution",
         h2: "One OS for your entire deal.",
+        intro: "Every module follows the same flow: centralized data, parallel agents, committee-ready output.",
         cta: "See the demo →",
         viewDetail: "Explore",
         viewDetailSuffix: "in depth →",
@@ -406,6 +459,7 @@ const translations = {
       useCases: {
         label: "Use Cases",
         h2: "Real results. Measured.",
+        sub: "Five segments — PE, IB, M&A Advisors, Legal, Corporate.",
         link: "All use cases →",
         cardCta: "See details →",
       },
@@ -447,13 +501,13 @@ const translations = {
       ctaFinal: {
         h2a: "Your next deal.",
         h2b: "In minutes.",
-        sub: "Start with a free POC on your next deal. Results guaranteed in 4 hours.",
-        ctaPrimary: "Start my free POC →",
+        sub: "Book a 30-minute call with the team — tailored demo, no commitment.",
+        ctaPrimary: "Request a 30-minute demo →",
         ctaSecondary: "View use cases",
         stats: [
-          { value: "Free", label: "On your first deal" },
-          { value: "4 hours", label: "Guaranteed results" },
-          { value: "24h", label: "Response time" },
+          { value: "30 min", label: "Tailored walkthrough" },
+          { value: "4 hours", label: "Typical DD target" },
+          { value: "24h", label: "Team response" },
         ],
       },
     },

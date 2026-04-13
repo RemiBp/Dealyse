@@ -7,6 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SolutionTabs from "@/components/SolutionTabs";
 import SegmentLandingCard from "@/components/SegmentLandingCard";
 import DarkProofStrip from "@/components/DarkProofStrip";
+import HowItWorksBand from "@/components/HowItWorksBand";
 import { segments } from "@/lib/content/segments";
 import { useLang } from "@/lib/i18n";
 
@@ -43,9 +44,23 @@ export default function Home() {
                 </h1>
               </AnimatedSection>
 
-              <AnimatedSection delay={120}>
-                <p style={{ fontSize: "clamp(1rem, 1.8vw, 1.2rem)", color: "#71717a", maxWidth: 520, lineHeight: 1.65, marginBottom: 48, fontWeight: 400 }}>
-                  {p.hero.sub}
+              <AnimatedSection delay={100}>
+                <p
+                  style={{
+                    fontSize: "clamp(1rem, 1.75vw, 1.15rem)",
+                    color: "#001012",
+                    maxWidth: 600,
+                    lineHeight: 1.65,
+                    marginBottom: 16,
+                    fontWeight: 500,
+                  }}
+                >
+                  {p.hero.foundryHook}
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={140}>
+                <p style={{ fontSize: "clamp(0.95rem, 1.65vw, 1.1rem)", color: "#71717a", maxWidth: 600, lineHeight: 1.7, marginBottom: 48, fontWeight: 400 }}>
+                  {p.hero.dealOsExplain}
                 </p>
               </AnimatedSection>
 
@@ -89,10 +104,13 @@ export default function Home() {
           <style>{`@media(max-width:768px){.hero-metrics{grid-template-columns:repeat(2,1fr)!important}.hero-metrics>div{padding-left:0!important;border-right:1px solid #e4e4e7!important;padding-bottom:24px}.hero-metrics>div:nth-child(2n){border-right:none!important}}`}</style>
         </section>
 
-        {/* ─── 2. SOCIAL PROOF STRIP ──────────────────────────────── */}
+        {/* ─── 2. COMMENT ÇA MARCHE (flux concret) ───────────────── */}
+        <HowItWorksBand />
+
+        {/* ─── 3. SOCIAL PROOF STRIP ──────────────────────────────── */}
         <DarkProofStrip label={p.proof.label} items={p.proof.items} variant="inline" paddingY={36} />
 
-        {/* ─── 3. LE PROBLÈME + AVANT/APRÈS ───────────────────────── */}
+        {/* ─── 4. LE PROBLÈME + AVANT/APRÈS ───────────────────────── */}
         <section style={{ background: "#fafafa", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
           <div className="container">
             <AnimatedSection>
@@ -127,10 +145,10 @@ export default function Home() {
           <style>{`@media(max-width:768px){.ba-header,.ba-row{grid-template-columns:1fr!important}.ba-header>div:first-child,.ba-row>div:first-child{border-right:none!important;border-bottom:1px solid #e4e4e7!important}}`}</style>
         </section>
 
-        {/* ─── 4. LA SOLUTION — TABS ───────────────────────────────── */}
+        {/* ─── 5. LA SOLUTION — TABS ───────────────────────────────── */}
         <SolutionTabs />
 
-        {/* ─── 5. POURQUOI PALANTIR FOUNDRY ───────────────────────── */}
+        {/* ─── 6. POURQUOI PALANTIR FOUNDRY ───────────────────────── */}
         <section style={{ background: "#001012", padding: "120px 0", borderBottom: "1px solid #18181b" }}>
           <div className="container">
             <AnimatedSection>
@@ -162,7 +180,7 @@ export default function Home() {
           <style>{`@media(max-width:900px){.foundry-header{grid-template-columns:1fr!important}.foundry-grid{grid-template-columns:1fr!important}}`}</style>
         </section>
 
-        {/* ─── 6. SOLUTIONS PAR SEGMENT ───────────────────────────── */}
+        {/* ─── 7. SOLUTIONS PAR SEGMENT ───────────────────────────── */}
         <section style={{ background: "#fafafa", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
           <div className="container">
             <AnimatedSection>
@@ -183,46 +201,78 @@ export default function Home() {
           <style>{`@media(max-width:900px){.seg-landing-top,.seg-landing-bottom{grid-template-columns:1fr!important}}`}</style>
         </section>
 
-        {/* ─── 7. USE CASES ───────────────────────────────────────── */}
+        {/* ─── 8. USE CASES ───────────────────────────────────────── */}
         <section style={{ background: "white", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
           <div className="container">
             <AnimatedSection>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 64, flexWrap: "wrap", gap: 16 }}>
                 <div>
                   <span className="label" style={{ display: "block", marginBottom: 16 }}>{p.useCases.label}</span>
-                  <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", maxWidth: 480 }}>{p.useCases.h2}</h2>
+                  <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", maxWidth: 520 }}>{p.useCases.h2}</h2>
+                  <p style={{ fontSize: 14, color: "#71717a", marginTop: 12, maxWidth: 520, lineHeight: 1.55 }}>{p.useCases.sub}</p>
                 </div>
-                <Link href="/use-cases" style={{ fontSize: 12, fontWeight: 700, color: "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>{p.useCases.link}</Link>
+                <Link href="/use-cases" style={{ fontSize: 12, fontWeight: 700, color: "#00493a", textTransform: "uppercase", letterSpacing: "0.06em", alignSelf: "end" }}>{p.useCases.link}</Link>
               </div>
             </AnimatedSection>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, border: "1px solid #e4e4e7" }} className="uc-grid">
-              {segments.slice(0, 3).map((s, i) => (
-                <AnimatedSection key={i} delay={i * 80}>
-                  <div style={{ background: i === 1 ? "#001012" : "white", borderRight: i < 2 ? "1px solid #e4e4e7" : "none", padding: "40px 36px", height: "100%", display: "flex", flexDirection: "column" }}>
-                    <div style={{ marginBottom: 24, paddingBottom: 20, borderBottom: `1px solid ${i === 1 ? "#27272a" : "#f4f4f5"}` }}>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: i === 1 ? "#00c896" : "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.name}</span>
-                    </div>
-                    <h3 style={{ fontSize: 16, fontWeight: 700, color: i === 1 ? "white" : "#001012", letterSpacing: "-0.01em", marginBottom: 16, lineHeight: 1.3, flex: 1 }}>{s.useCase.title}</h3>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, marginBottom: 24 }}>
-                      {s.metrics.map((m, j) => (
-                        <div key={j} style={{ background: i === 1 ? "#0a0a0b" : "#fafafa", border: `1px solid ${i === 1 ? "#18181b" : "#e4e4e7"}`, padding: "10px 12px" }}>
-                          <div style={{ fontSize: 18, fontWeight: 800, fontFamily: "monospace", color: i === 1 ? "white" : "#001012", letterSpacing: "-0.02em" }}>{m.value}</div>
-                          <div style={{ fontSize: 11, color: i === 1 ? "var(--text-muted-on-dark)" : "#a1a1aa", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginTop: 2 }}>{m.label}</div>
+            <div style={{ border: "1px solid #e4e4e7" }} className="uc-wrap">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0 }} className="uc-row1">
+                {segments.slice(0, 3).map((s, i) => {
+                  const dark = i === 1;
+                  return (
+                    <AnimatedSection key={s.slug} delay={i * 80}>
+                      <div className="uc-cell" style={{ background: dark ? "#001012" : "white", borderRight: i < 2 ? "1px solid #e4e4e7" : "none", padding: "40px 36px", height: "100%", display: "flex", flexDirection: "column" }}>
+                        <div style={{ marginBottom: 24, paddingBottom: 20, borderBottom: `1px solid ${dark ? "#27272a" : "#f4f4f5"}` }}>
+                          <span style={{ fontSize: 11, fontWeight: 700, color: dark ? "#00c896" : "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.name}</span>
                         </div>
-                      ))}
-                    </div>
-                    <Link href={`/${s.slug}`} style={{ fontSize: 11, fontWeight: 700, color: i === 1 ? "#00c896" : "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                      {p.useCases.cardCta}
-                    </Link>
-                  </div>
-                </AnimatedSection>
-              ))}
+                        <h3 style={{ fontSize: 16, fontWeight: 700, color: dark ? "white" : "#001012", letterSpacing: "-0.01em", marginBottom: 16, lineHeight: 1.3, flex: 1 }}>{s.useCase.title}</h3>
+                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, marginBottom: 24 }}>
+                          {s.metrics.map((m, j) => (
+                            <div key={j} style={{ background: dark ? "#0a0a0b" : "#fafafa", border: `1px solid ${dark ? "#18181b" : "#e4e4e7"}`, padding: "10px 12px" }}>
+                              <div style={{ fontSize: 18, fontWeight: 800, fontFamily: "monospace", color: dark ? "white" : "#001012", letterSpacing: "-0.02em" }}>{m.value}</div>
+                              <div style={{ fontSize: 11, color: dark ? "var(--text-muted-on-dark)" : "#a1a1aa", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginTop: 2 }}>{m.label}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <Link href={`/${s.slug}`} style={{ fontSize: 11, fontWeight: 700, color: dark ? "#00c896" : "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                          {p.useCases.cardCta}
+                        </Link>
+                      </div>
+                    </AnimatedSection>
+                  );
+                })}
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 0, borderTop: "1px solid #e4e4e7" }} className="uc-row2">
+                {segments.slice(3, 5).map((s, i) => {
+                  const idx = i + 3;
+                  return (
+                    <AnimatedSection key={s.slug} delay={idx * 80}>
+                      <div className="uc-cell" style={{ background: "white", borderRight: i === 0 ? "1px solid #e4e4e7" : "none", padding: "40px 36px", height: "100%", display: "flex", flexDirection: "column" }}>
+                        <div style={{ marginBottom: 24, paddingBottom: 20, borderBottom: "1px solid #f4f4f5" }}>
+                          <span style={{ fontSize: 11, fontWeight: 700, color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.name}</span>
+                        </div>
+                        <h3 style={{ fontSize: 16, fontWeight: 700, color: "#001012", letterSpacing: "-0.01em", marginBottom: 16, lineHeight: 1.3, flex: 1 }}>{s.useCase.title}</h3>
+                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, marginBottom: 24 }}>
+                          {s.metrics.map((m, j) => (
+                            <div key={j} style={{ background: "#fafafa", border: "1px solid #e4e4e7", padding: "10px 12px" }}>
+                              <div style={{ fontSize: 18, fontWeight: 800, fontFamily: "monospace", color: "#001012", letterSpacing: "-0.02em" }}>{m.value}</div>
+                              <div style={{ fontSize: 11, color: "#a1a1aa", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginTop: 2 }}>{m.label}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <Link href={`/${s.slug}`} style={{ fontSize: 11, fontWeight: 700, color: "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                          {p.useCases.cardCta}
+                        </Link>
+                      </div>
+                    </AnimatedSection>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          <style>{`@media(max-width:900px){.uc-grid{grid-template-columns:1fr!important}.uc-grid>div{border-right:none!important;border-bottom:1px solid #e4e4e7!important}}`}</style>
+          <style>{`@media(max-width:900px){.uc-row1,.uc-row2{grid-template-columns:1fr!important}.uc-cell{border-right:none!important;border-bottom:1px solid #e4e4e7!important}.uc-row2 .uc-cell:last-child{border-bottom:none!important}}`}</style>
         </section>
 
-        {/* ─── 8. PRICING ─────────────────────────────────────────── */}
+        {/* ─── 9. PRICING ─────────────────────────────────────────── */}
         <section id="pricing" style={{ background: "#fafafa", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
           <div className="container">
             <AnimatedSection>
@@ -262,7 +312,7 @@ export default function Home() {
           <style>{`@media(max-width:900px){.pricing-grid{grid-template-columns:1fr!important}.pricing-grid>div{border-right:none!important;border-bottom:1px solid #e4e4e7!important}}`}</style>
         </section>
 
-        {/* ─── 9. INTÉGRATIONS ────────────────────────────────────── */}
+        {/* ─── 10. INTÉGRATIONS ───────────────────────────────────── */}
         <section style={{ background: "white", padding: "96px 0", borderBottom: "1px solid #e4e4e7" }}>
           <div className="container">
             <AnimatedSection>
@@ -284,7 +334,7 @@ export default function Home() {
           <style>{`@media(max-width:768px){.integ-grid{grid-template-columns:repeat(2,1fr)!important}.integ-grid>div{border-right:1px solid #e4e4e7!important}.integ-grid>div:nth-child(2n){border-right:none!important}}`}</style>
         </section>
 
-        {/* ─── 10. CTA FINAL ──────────────────────────────────────── */}
+        {/* ─── 11. CTA FINAL ──────────────────────────────────────── */}
         <section style={{ background: "#001012", padding: "120px 0" }}>
           <div className="container">
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }} className="cta-final">

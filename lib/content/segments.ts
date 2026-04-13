@@ -364,10 +364,10 @@ export const segments: Segment[] = [
         "8 clauses critiques détectées que nous aurions probablement manquées sous la pression du timing.",
     },
     metrics: [
-      { value: "6h", label: "340 contrats" },
+      { value: "340", label: "contrats" },
+      { value: "6h", label: "analyse totale" },
       { value: "8", label: "clauses critiques" },
-      { value: "−3 sem.", label: "économisées" },
-      { value: "0", label: "manqué" },
+      { value: "0", label: "clause manquée" },
     ],
     image: "/images/ui/afc_alerting.png",
     before: [
@@ -452,10 +452,10 @@ export const segments: Segment[] = [
         "On a multiplié notre capacité d'exécution par 4 sans augmenter l'équipe.",
     },
     metrics: [
-      { value: "×4", label: "capacité" },
-      { value: "−80%", label: "coûts DD" },
-      { value: "30min", label: "IC memo" },
-      { value: "0", label: "cabinet externe" },
+      { value: "×4", label: "capacité exécution" },
+      { value: "−80%", label: "coûts conseil DD" },
+      { value: "30 min", label: "IC memo" },
+      { value: "0", label: "cabinet DD externe" },
     ],
     image: "/images/ui/single_client_view.png",
     before: [

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s — DEALYSE",
   },
   description:
-    "Data room, pipeline et livrables sur une plateforme souveraine. Due diligence et exécution deal accélérées sur Palantir Foundry — M&A mid-market.",
+    "Deal OS M&A : data room, analyses, modèles et mémos sur une plateforme souveraine Palantir Foundry. DD et exécution accélérées — mid-market.",
   keywords: [
     "due diligence IA", "deal management", "Palantir Foundry", "M&A software",
     "private equity tools", "investment banking", "LBO model", "IC memo", "data room",
