@@ -17,11 +17,11 @@ export default function SolutionTabs() {
   const product = products.find((p) => p.slug === slug)!;
 
   return (
-    <section style={{ background: "white", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
+    <section style={{ background: "white", padding: "56px 0 120px", borderBottom: "1px solid #e4e4e7" }}>
       <div className="container">
         <HowItWorksBand compact />
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 8, flexWrap: "wrap", gap: 16 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 0, flexWrap: "wrap", gap: 16 }}>
           <div>
             <span className="label" style={{ display: "block", marginBottom: 16 }}>{tabs.label}</span>
             <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", maxWidth: 520 }}>{tabs.h2}</h2>

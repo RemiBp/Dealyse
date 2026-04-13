@@ -18,20 +18,20 @@ export default function HowItWorksBand({
     <Tag
       style={{
         background,
-        padding: compact ? "0 0 40px" : "72px 0",
+        padding: compact ? "0 0 28px" : "72px 0",
         borderBottom: compact ? "none" : "1px solid #e4e4e7",
       }}
     >
       <div className="container">
         <AnimatedSection delay={0}>
-          <span className="label" style={{ display: "block", marginBottom: compact ? 12 : 16 }}>
+          <span className="label" style={{ display: "block", marginBottom: compact ? 8 : 16 }}>
             {h.label}
           </span>
           <h2
             style={{
               fontWeight: 500,
               letterSpacing: "-0.02em",
-              marginBottom: compact ? 8 : 12,
+              marginBottom: compact ? 6 : 12,
               maxWidth: 560,
               fontSize: compact ? "clamp(1.1rem, 2.2vw, 1.4rem)" : undefined,
             }}
@@ -59,7 +59,7 @@ export default function HowItWorksBand({
               className="how-step-cell"
               style={{
                 borderRight: i < 2 ? "1px solid #e4e4e7" : "none",
-                padding: compact ? "20px 22px" : "28px 28px",
+                padding: compact ? "16px 20px" : "28px 28px",
               }}
             >
               <AnimatedSection delay={compact ? 0 : 40 + i * 50}>
