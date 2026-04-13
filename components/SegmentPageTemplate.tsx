@@ -147,6 +147,57 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
         <style>{`@media(max-width:768px){.uc-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
+      {/* Before / After */}
+      <section style={{ background: "white", padding: "96px 0", borderBottom: "1px solid #e4e4e7" }}>
+        <div className="container">
+          <AnimatedSection>
+            <span className="label" style={{ display: "block", marginBottom: 16 }}>Avant · Après</span>
+            <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", marginBottom: 56 }}>Ce que DEALYSE change concrètement.</h2>
+          </AnimatedSection>
+          <div style={{ border: "1px solid #e4e4e7" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "#001012" }}>
+              <div style={{ padding: "14px 24px", fontSize: 11, fontWeight: 800, color: "#52525b", textTransform: "uppercase", letterSpacing: "0.1em", borderRight: "1px solid #18181b" }}>Sans DEALYSE</div>
+              <div style={{ padding: "14px 24px", fontSize: 11, fontWeight: 800, color: "#00c896", textTransform: "uppercase", letterSpacing: "0.1em" }}>Avec DEALYSE</div>
+            </div>
+            {s.before.map((row, i) => (
+              <AnimatedSection key={i} delay={i * 40}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid #e4e4e7" }}>
+                  <div style={{ padding: "16px 24px", fontSize: 14, color: "#71717a", borderRight: "1px solid #e4e4e7", background: i % 2 === 0 ? "white" : "#fafafa" }}>
+                    <span style={{ marginRight: 8, color: "#d4d4d8", fontSize: 11 }}>✕</span>{row.label}
+                  </div>
+                  <div style={{ padding: "16px 24px", fontSize: 14, color: "#001012", fontWeight: 600, background: i % 2 === 0 ? "white" : "#fafafa" }}>
+                    <span style={{ marginRight: 8, color: "#00493a", fontWeight: 800, fontSize: 11 }}>✓</span>{row.after}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ background: "#fafafa", padding: "96px 0", borderBottom: "1px solid #e4e4e7" }}>
+        <div className="container" style={{ maxWidth: 720 }}>
+          <AnimatedSection>
+            <span className="label" style={{ display: "block", marginBottom: 16 }}>FAQ</span>
+            <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", marginBottom: 56 }}>Questions fréquentes</h2>
+          </AnimatedSection>
+          {s.faq.map((item, i) => (
+            <AnimatedSection key={i} delay={i * 60}>
+              <div style={{ padding: "24px 0", borderBottom: "1px solid #e4e4e7" }}>
+                <div style={{ fontSize: 15, fontWeight: 700, color: "#001012", marginBottom: 8 }}>{item.q}</div>
+                <div style={{ fontSize: 14, color: "#71717a", lineHeight: 1.65 }}>{item.a}</div>
+              </div>
+            </AnimatedSection>
+          ))}
+          <div style={{ paddingTop: 40 }}>
+            <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: "#00493a" }}>
+              Une autre question ? Contactez-nous →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{ background: "#00493a", padding: "80px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>

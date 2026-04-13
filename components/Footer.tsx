@@ -75,11 +75,11 @@ export default function Footer() {
             © 2026 DEALYSE. Propulsé par Palantir Foundry.
           </span>
           <div style={{ display: "flex", gap: 24 }}>
-            {["Mentions légales", "Confidentialité"].map((l) => (
-              <Link key={l} href="#" style={{ fontSize: 12, color: "#3f3f46", transition: "color 0.15s" }}
+            {[{ label: "Mentions légales", href: "/mentions-legales" }, { label: "Confidentialité", href: "/confidentialite" }].map((l) => (
+              <Link key={l.label} href={l.href} style={{ fontSize: 12, color: "#3f3f46", transition: "color 0.15s" }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#52525b")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#3f3f46")}>
-                {l}
+                {l.label}
               </Link>
             ))}
           </div>

@@ -10,6 +10,8 @@ export type Segment = {
   useCase: { title: string; context: string; results: string[]; quote: string };
   metrics: { value: string; label: string }[];
   image: string;
+  before: { label: string; after: string }[];
+  faq: { q: string; a: string }[];
 };
 
 export const segments: Segment[] = [
@@ -95,6 +97,21 @@ export const segments: Segment[] = [
       { value: "0", label: "red flag manqué" },
     ],
     image: "/images/ui/carrier_allocation.png",
+    before: [
+      { label: "6 semaines de DD", after: "4 heures" },
+      { label: "150 000€ de conseil externe", after: "499€/mois" },
+      { label: "5 analystes mobilisés", after: "1 analyste pilote" },
+      { label: "3 jours pour l'IC memo", after: "30 minutes" },
+      { label: "Excel pour le LBO", after: "LBO auto-généré" },
+      { label: "Reporting LP manuel", after: "One-click automatisé" },
+    ],
+    faq: [
+      { q: "Faut-il uploader toute la data room d'un coup ?", a: "Non. Vous pouvez uploader progressivement — DEALYSE analyse en continu. Chaque nouveau document enrichit automatiquement le rapport existant." },
+      { q: "Comment DEALYSE gère-t-il les documents en langue étrangère ?", a: "DEALYSE supporte l'analyse multilingue natif : anglais, français, allemand, espagnol, néerlandais, polonais. Le rapport de synthèse est toujours produit dans la langue de votre choix." },
+      { q: "Le LBO model est-il exportable vers Excel ?", a: "Oui. Export Excel natif en un clic, avec toutes les formules et la structure standard attendue par les comités d'investissement." },
+      { q: "Mes LPs peuvent-ils accéder au reporting directement ?", a: "Non par défaut — vous contrôlez qui accède à quoi. Vous pouvez exporter le reporting LP en PDF ou partager un lien sécurisé avec accès limité." },
+      { q: "Quelle est la précision de détection des red flags ?", a: "91% sur les datasets de test internes. Avec un taux de faux positifs volontairement élevé (il vaut mieux investiguer un non-problème qu'en manquer un vrai)." },
+    ],
   },
   {
     slug: "investment-banking",
@@ -178,6 +195,20 @@ export const segments: Segment[] = [
       { value: "×3", label: "mandats gérables" },
     ],
     image: "/images/ui/network_opt.png",
+    before: [
+      { label: "Pitchbook en 2 à 3 jours", after: "2 heures" },
+      { label: "Comps tables outdatées", after: "Live — Bloomberg intégré" },
+      { label: "NDA par email", after: "Signature électronique 24h" },
+      { label: "Data room désorganisée", after: "Structurée automatiquement" },
+      { label: "Q&A acheteurs par email", after: "Q&A centralisé + analytics" },
+      { label: "CRM généraliste", after: "Pipeline mandats dédié M&A" },
+    ],
+    faq: [
+      { q: "DEALYSE génère-t-il des pitchbooks à partir de zéro ou depuis nos templates ?", a: "Les deux. DEALYSE peut partir de vos templates PowerPoint existants ou générer depuis les templates standards sectoriels intégrés. La personnalisation est complète." },
+      { q: "Peut-on gérer plusieurs mandats sell-side simultanément ?", a: "Oui, sans limite sur le plan Pro. Chaque mandat a son propre espace, ses propres acheteurs, sa propre data room et son propre Q&A." },
+      { q: "Les acheteurs potentiels ont-ils accès à DEALYSE directement ?", a: "Non. Les acheteurs reçoivent un lien sécurisé vers la data room avec les droits que vous leur accordez. Ils n'ont pas de compte DEALYSE." },
+      { q: "Bloomberg doit-il être souscrit séparément ?", a: "Oui. L'intégration Bloomberg nécessite un accès Bloomberg existant. DEALYSE se connecte via l'API Bloomberg — la donnée s'actualise en temps réel dans vos pitchbooks." },
+    ],
   },
   {
     slug: "ma-advisors",
@@ -252,6 +283,19 @@ export const segments: Segment[] = [
       { value: "0", label: "recrutement" },
     ],
     image: "/images/ui/motherbrain.png",
+    before: [
+      { label: "DD externalisée : marges érodées", after: "DD internalisée : +40% marges" },
+      { label: "Livrables en 3 semaines", after: "Livrables en 3 jours" },
+      { label: "3 mandats max simultanément", after: "9+ mandats simultanément" },
+      { label: "IM rédigé manuellement", after: "IM généré automatiquement" },
+      { label: "Coordination multi-parties par email", after: "Workflow centralisé + alertes" },
+      { label: "Facturation au temps", after: "Facturation orientée valeur" },
+    ],
+    faq: [
+      { q: "DEALYSE remplace-t-il nos avocats et experts-comptables ?", a: "Non. DEALYSE automatise la collecte, l'analyse et la synthèse des données. L'expertise et le jugement professionnel restent indispensables pour les décisions finales et la rédaction des avis juridiques et financiers." },
+      { q: "Peut-on co-brander les livrables clients ?", a: "Oui. Les rapports DD, les IC memos et les Infos Memos sont générés avec votre branding, vos couleurs et votre logo. Vos clients reçoivent un livrable qui porte votre identité." },
+      { q: "Combien de temps pour onboarder notre équipe ?", a: "La prise en main est de 2 heures maximum pour une utilisation courante. Nous accompagnons chaque nouvelle équipe avec une session de formation dédiée." },
+    ],
   },
   {
     slug: "legal",
@@ -326,6 +370,20 @@ export const segments: Segment[] = [
       { value: "0", label: "manqué" },
     ],
     image: "/images/ui/afc_alerting.png",
+    before: [
+      { label: "340 contrats en 3 semaines", after: "340 contrats en 6 heures" },
+      { label: "Clauses risquées manquées sous pression", after: "Détection exhaustive garantie" },
+      { label: "SPA v1 à v47 : versioning manuel", after: "Comparaison automatique v-to-v" },
+      { label: "DD juridique externalisée", after: "DD internalisée à coût fixe" },
+      { label: "Closing checklist Excel", after: "Checklist automatisée + alertes" },
+      { label: "Archive désorganisée post-deal", after: "Archive searchable indexée" },
+    ],
+    faq: [
+      { q: "DEALYSE peut-il remplacer la revue juridique par un avocat ?", a: "Non. DEALYSE est un outil d'assistance et d'efficacité — il automatise la détection et le tri, mais l'analyse juridique finale et la responsabilité professionnelle restent celles des avocats." },
+      { q: "Quels formats contractuels sont supportés ?", a: "Word (.docx), PDF, et fichiers signés électroniquement (DocuSign, Adobe Sign). L'OCR intégré traite également les PDFs scannés." },
+      { q: "Comment fonctionne la comparaison de versions SPA ?", a: "Upload les deux versions — DEALYSE identifie toutes les modifications, les classe par type (ajout, suppression, modification), et produit un résumé des changements matériels." },
+      { q: "Les documents analysés sont-ils confidentiels ?", a: "Absolument. Chaque deal a un espace isolé. Aucun document ne transite par des services tiers. Tout reste dans votre environnement Palantir Foundry chiffré AES-256." },
+    ],
   },
   {
     slug: "corporate",
@@ -400,5 +458,18 @@ export const segments: Segment[] = [
       { value: "0", label: "cabinet externe" },
     ],
     image: "/images/ui/single_client_view.png",
+    before: [
+      { label: "DD externalisée à 80-150k€", after: "DD interne à 499€/mois" },
+      { label: "IC memo en 3 jours", after: "IC memo en 30 minutes" },
+      { label: "Pipeline acquisitions dans Excel", after: "Pipeline centralisé temps réel" },
+      { label: "Reporting principals chronophage", after: "Reporting one-click" },
+      { label: "Dépendance totale aux conseils", after: "Autonomie sur chaque deal" },
+      { label: "1 à 2 acquisitions par an", after: "8+ acquisitions par an" },
+    ],
+    faq: [
+      { q: "DEALYSE est-il adapté si nous faisons moins de 2 deals par an ?", a: "Oui. Le plan Free vous permet de tester DEALYSE sur votre prochain deal sans engagement. Même sur 1 à 2 deals par an, les économies réalisées sur les frais de conseil couvrent largement l'abonnement." },
+      { q: "Faut-il une équipe M&A dédiée pour utiliser DEALYSE ?", a: "Non. DEALYSE est conçu pour être utilisé par une personne sans expertise M&A approfondie. Le produit guide l'utilisateur à chaque étape." },
+      { q: "Comment DEALYSE se compare-t-il à un cabinet DD externe ?", a: "DEALYSE est complémentaire, pas concurrent. Pour les deals simples, DEALYSE peut remplacer une DD externe. Pour les deals complexes, DEALYSE réduit de 60-70% le temps facturé par les cabinets externes." },
+    ],
   },
 ];

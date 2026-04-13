@@ -4,11 +4,9 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const posts = [
-  { slug: "dd-6-semaines", category: "M&A", date: "Avr 2026", title: "Pourquoi la DD prend encore 6 semaines en 2026", excerpt: "Les processus de due diligence n'ont pas fondamentalement changé depuis 20 ans. Voici pourquoi — et comment les équipes les plus avancées commencent à changer.", readTime: "8 min" },
-  { slug: "palantir-fondry-ma", category: "Palantir", date: "Mar 2026", title: "Palantir Foundry expliqué aux équipes M&A", excerpt: "Ce que Foundry fait vraiment, pourquoi c'est différent des autres outils IA, et pourquoi c'est la meilleure infrastructure pour le M&A enterprise.", readTime: "12 min" },
-  { slug: "ai-act-pe", category: "Réglementation", date: "Mar 2026", title: "AI Act : ce que ça change pour les fonds PE", excerpt: "Le règlement européen sur l'IA entre en application. Ce que les fonds de PE doivent comprendre sur les obligations de conformité pour leurs outils IA.", readTime: "6 min" },
-  { slug: "red-flags-pression", category: "M&A", date: "Fév 2026", title: "5 red flags que les analystes ratent sous pression", excerpt: "La concentration client, la dette hors bilan, les clauses d'earn-out ambiguës. Ces risques sont systématiquement sous-évalués quand les équipes sont en sous-effectif.", readTime: "5 min" },
-  { slug: "lbo-erreurs", category: "M&A", date: "Fév 2026", title: "LBO model : les erreurs de modélisation les plus coûteuses", excerpt: "Working capital mal calculé, CAPEX de maintenance ignoré, synergies surestimées. Les biais de modélisation qui ont coûté le plus cher aux fonds PE.", readTime: "10 min" },
+  { slug: "pourquoi-la-dd-prend-6-semaines", category: "M&A", date: "Avr 2026", title: "Pourquoi la DD prend encore 6 semaines en 2026", excerpt: "Les processus de due diligence n'ont pas fondamentalement changé depuis 20 ans. Voici pourquoi — et comment les équipes les plus avancées commencent à changer.", readTime: "8 min" },
+  { slug: "palantir-foundry-explique-ma", category: "Palantir", date: "Mar 2026", title: "Palantir Foundry expliqué aux équipes M&A", excerpt: "Ce que Foundry fait vraiment, pourquoi c'est différent des outils IA classiques, et pourquoi c'est la meilleure infrastructure pour le M&A enterprise.", readTime: "12 min" },
+  { slug: "5-red-flags-analyses-manquent", category: "M&A", date: "Fév 2026", title: "5 red flags que les analystes ratent sous pression", excerpt: "Concentration client, dette hors bilan, clauses d'earn-out ambiguës. Ces risques sont systématiquement sous-évalués quand les équipes manquent de temps.", readTime: "5 min" },
 ];
 
 export default function BlogPage() {
