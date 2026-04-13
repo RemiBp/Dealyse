@@ -45,7 +45,7 @@ export default function ProductPageTemplate({ p }: { p: Product }) {
       {/* Bandeau visuel — pleine largeur, noir uni */}
       <section
         className="product-screenshot-banner"
-        style={{ background: "#000000", padding: "28px 0", borderBottom: "1px solid #141414" }}
+        style={{ background: "#000000", padding: "10px 0", borderBottom: "1px solid #141414" }}
       >
         <div className="product-screenshot__media product-screenshot__media--banner">
           <Image

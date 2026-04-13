@@ -258,7 +258,7 @@ a { text-decoration: none; }
 .product-screenshot__media {
   position: relative;
   width: 100%;
-  height: clamp(140px, 16vh, 200px);
+  height: clamp(47px, 5.33vh, 67px);
   overflow: hidden;
   background: #000000;
 }
@@ -266,7 +266,7 @@ a { text-decoration: none; }
 .product-screenshot__media--banner {
   max-width: 100%;
   margin: 0 auto;
-  height: clamp(150px, 18vh, 220px);
+  height: clamp(50px, 6vh, 74px);
 }
 
 .product-screenshot__media > span {
