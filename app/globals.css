@@ -147,6 +147,12 @@ a {
   transform: translateY(0);
 }
 
+/* ─── Scrollbar polish ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--zinc-200); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--zinc-300); }
+
 /* ─── Hover utilities (CSS-only, no JS handlers needed) ──────────────────── */
 .hover-bg:hover { background: #fafafa !important; }
 .hover-bg-dark:hover { background: #003d31 !important; }

@@ -258,7 +258,7 @@ export default function Home() {
                 <AnimatedSection key={i} delay={i * 80}>
                   <div style={{ background: i === 1 ? "#001012" : "white", borderRight: i < 2 ? "1px solid #e4e4e7" : "none", padding: "40px 36px", height: "100%", display: "flex", flexDirection: "column" }}>
                     <div style={{ marginBottom: 24, paddingBottom: 20, borderBottom: `1px solid ${i === 1 ? "#27272a" : "#f4f4f5"}` }}>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: i === 1 ? "#00493a" : "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.emoji} {s.name}</span>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: i === 1 ? "#00c896" : "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.emoji} {s.name}</span>
                     </div>
                     <h3 style={{ fontSize: 16, fontWeight: 700, color: i === 1 ? "white" : "#001012", letterSpacing: "-0.01em", marginBottom: 16, lineHeight: 1.3, flex: 1 }}>{s.useCase.title}</h3>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, marginBottom: 24 }}>
@@ -269,7 +269,7 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <Link href={`/${s.slug}`} style={{ fontSize: 11, fontWeight: 700, color: "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                    <Link href={`/${s.slug}`} style={{ fontSize: 11, fontWeight: 700, color: i === 1 ? "#00c896" : "#00493a", textTransform: "uppercase", letterSpacing: "0.06em" }}>
                       Voir le détail →
                     </Link>
                   </div>
@@ -308,7 +308,7 @@ export default function Home() {
                     <div style={{ flex: 1, borderTop: `1px solid ${plan.highlight ? "#27272a" : "#f4f4f5"}`, marginBottom: 32 }}>
                       {plan.features.map((f, j) => (
                         <div key={j} style={{ display: "flex", gap: 10, padding: "10px 0", borderBottom: `1px solid ${plan.highlight ? "#18181b" : "#f4f4f5"}` }}>
-                          <span style={{ color: "#00493a", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}>✓</span>
+                          <span style={{ color: plan.highlight ? "#00c896" : "#00493a", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}>✓</span>
                           <span style={{ fontSize: 13, color: plan.highlight ? "#a1a1aa" : "#52525b" }}>{f}</span>
                         </div>
                       ))}
