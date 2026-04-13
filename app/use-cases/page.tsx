@@ -91,7 +91,7 @@ export default function UseCasesPage() {
                     <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid #e4e4e7" }}>
                       {c.results.map((r, j) => (
                         <div key={j} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #f4f4f5" }}>
-                          <span style={{ color: "#00493a", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}>✓</span>
+                          <span style={{ color: "#00493a", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}></span>
                           <span style={{ fontSize: 14, color: "#001012", fontWeight: 500 }}>{r}</span>
                         </div>
                       ))}

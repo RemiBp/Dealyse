@@ -17,7 +17,7 @@ export type Segment = {
 export const segments: Segment[] = [
   {
     slug: "private-equity",
-    emoji: "🏦",
+    emoji: "",
     name: "Private Equity",
     shortName: "Private Equity",
     hero: {
@@ -115,7 +115,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "investment-banking",
-    emoji: "💼",
+    emoji: "",
     name: "Investment Banking",
     shortName: "IB",
     hero: {
@@ -212,7 +212,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "ma-advisors",
-    emoji: "🤝",
+    emoji: "",
     name: "M&A Advisors",
     shortName: "M&A Advisors",
     hero: {
@@ -299,7 +299,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "legal",
-    emoji: "⚖️",
+    emoji: "",
     name: "Cabinets d'Avocats",
     shortName: "Legal",
     hero: {
@@ -387,7 +387,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "corporate",
-    emoji: "🏢",
+    emoji: "",
     name: "Corporate & Family Office",
     shortName: "Corporate",
     hero: {

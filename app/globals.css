@@ -37,6 +37,16 @@
   /* Layout — Sharp corners is the brand signature */
   --radius: 0rem;
 
+  /* Text on near-black (#001012 / #0a0a0b) — WCAG-friendly vs #52525b / #3f3f46 */
+  --text-muted-on-dark: #b9c0cb;
+  --text-subtle-on-dark: #8e96a3;
+  /* Bandeaux preuve / logos sur #001012 (labels + noms) */
+  --on-dark-strip-label: #a8b0bd;
+  --on-dark-strip-body: #cfd5dc;
+  /* Footer & zones #0a0a0b */
+  --footer-muted: #aeb6c4;
+  --footer-link: #c4cad3;
+
   /* Font */
   --font: 'Manrope', sans-serif;
 }
@@ -167,3 +177,20 @@ a {
 
 /* Link reset */
 a { text-decoration: none; }
+
+/* Landing — segment solution cards */
+.segment-landing-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+.segment-landing-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 20px 56px rgba(0, 16, 18, 0.09);
+}
+.segment-landing-card:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}

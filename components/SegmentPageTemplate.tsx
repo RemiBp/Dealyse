@@ -13,7 +13,6 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
         <div className="container" style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }} >
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 32 }}>
-              <span style={{ fontSize: 20 }}>{s.emoji}</span>
               <span className="label">{s.name}</span>
             </div>
             <h1 style={{ fontWeight: 500, letterSpacing: "-0.02em", marginBottom: 24, whiteSpace: "pre-line" }}>
@@ -51,7 +50,7 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
           {s.metrics.map((m, i) => (
             <div key={i} style={{ textAlign: "center", padding: "16px 0", borderRight: i < 3 ? "1px solid #18181b" : "none" }}>
               <div style={{ fontSize: "2rem", fontWeight: 800, color: "white", fontFamily: "monospace", letterSpacing: "-0.03em", lineHeight: 1 }}>{m.value}</div>
-              <div style={{ fontSize: 11, color: "#52525b", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 700 }}>{m.label}</div>
+              <div style={{ fontSize: 11, color: "var(--text-muted-on-dark)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 700 }}>{m.label}</div>
             </div>
           ))}
         </div>
@@ -136,7 +135,7 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
                   &ldquo;{s.useCase.quote}&rdquo;
                 </p>
                 <div style={{ marginTop: 32, paddingTop: 24, borderTop: "1px solid #27272a" }}>
-                  <span style={{ fontSize: 11, color: "#52525b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                  <span style={{ fontSize: 11, color: "var(--text-muted-on-dark)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>
                     — Client anonymisé · {s.name}
                   </span>
                 </div>
@@ -156,7 +155,7 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
           </AnimatedSection>
           <div style={{ border: "1px solid #e4e4e7" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "#001012" }}>
-              <div style={{ padding: "14px 24px", fontSize: 11, fontWeight: 800, color: "#52525b", textTransform: "uppercase", letterSpacing: "0.1em", borderRight: "1px solid #18181b" }}>Sans DEALYSE</div>
+              <div style={{ padding: "14px 24px", fontSize: 11, fontWeight: 800, color: "var(--text-subtle-on-dark)", textTransform: "uppercase", letterSpacing: "0.1em", borderRight: "1px solid #18181b" }}>Sans DEALYSE</div>
               <div style={{ padding: "14px 24px", fontSize: 11, fontWeight: 800, color: "#00c896", textTransform: "uppercase", letterSpacing: "0.1em" }}>Avec DEALYSE</div>
             </div>
             {s.before.map((row, i) => (
@@ -202,10 +201,10 @@ export default function SegmentPageTemplate({ s }: { s: Segment }) {
       <section style={{ background: "#00493a", padding: "80px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontWeight: 500, color: "white", letterSpacing: "-0.02em", marginBottom: 16 }}>
-            Prêt à transformer votre {s.shortName} ?
+            Votre prochain deal mérite mieux qu'Excel.
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", marginBottom: 40 }}>
-            Démarrez avec un POC gratuit sur votre prochain deal.
+            POC gratuit — résultats en 4 heures. Sans engagement, sans carte bancaire.
           </p>
           <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "white", color: "#001012", padding: "14px 32px", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", transition: "background 0.15s" }}
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "#f4f4f5")}

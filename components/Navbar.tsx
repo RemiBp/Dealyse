@@ -6,10 +6,12 @@ import { useLang } from "@/lib/i18n";
 import { segments } from "@/lib/content/segments";
 import { products } from "@/lib/content/products";
 
+// Nav uses segment shortName for dropdown — keep segment names in FR always (brand names)
+
 type DropdownKey = "solutions" | "produit" | null;
 
 export default function Navbar() {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState<DropdownKey>(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -86,21 +88,8 @@ export default function Navbar() {
           style={{ display: "flex", alignItems: "center", gap: 10 }}
           onClick={() => setOpen(null)}
         >
-          <div
-            style={{
-              width: 26,
-              height: 26,
-              background: "#00493a",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <span style={{ color: "white", fontSize: 10, fontWeight: 800, letterSpacing: "0.04em" }}>
-              DL
-            </span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-mark.svg" alt="DEALYSE mark" width={20} height={22} style={{ display: "block", flexShrink: 0 }} />
           <span style={{ fontWeight: 800, fontSize: 14, color: "#001012", letterSpacing: "0.06em", textTransform: "uppercase" }}>
             DEALYSE
           </span>
@@ -116,7 +105,7 @@ export default function Navbar() {
               onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#001012")}
               onMouseLeave={(e) => { if (open !== "solutions") (e.currentTarget as HTMLElement).style.color = "#71717a"; }}
             >
-              {lang === "fr" ? "Solutions" : "Solutions"}
+              {t.nav.solutions}
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ transition: "transform 0.2s", transform: open === "solutions" ? "rotate(180deg)" : "none" }}>
                 <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -151,7 +140,6 @@ export default function Navbar() {
                     onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "#fafafa")}
                     onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "white")}
                   >
-                    <span style={{ fontSize: 14 }}>{s.emoji}</span>
                     {s.name}
                   </Link>
                 ))}
@@ -167,7 +155,7 @@ export default function Navbar() {
               onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#001012")}
               onMouseLeave={(e) => { if (open !== "produit") (e.currentTarget as HTMLElement).style.color = "#71717a"; }}
             >
-              {lang === "fr" ? "Produit" : "Product"}
+              {t.nav.product}
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ transition: "transform 0.2s", transform: open === "produit" ? "rotate(180deg)" : "none" }}>
                 <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -208,9 +196,9 @@ export default function Navbar() {
           </div>
 
           {[
-            { href: "/use-cases", label: lang === "fr" ? "Use Cases" : "Use Cases" },
-            { href: "/pricing", label: lang === "fr" ? "Tarifs" : "Pricing" },
-            { href: "/about", label: lang === "fr" ? "À propos" : "About" },
+            { href: "/use-cases", label: t.nav.useCases },
+            { href: "/pricing", label: t.nav.pricing },
+            { href: "/about", label: t.nav.about },
           ].map((l) => (
             <Link
               key={l.href}
@@ -270,7 +258,7 @@ export default function Navbar() {
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "#003d31")}
             onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "#00493a")}
           >
-            {lang === "fr" ? "Demander une démo" : "Request a demo"}
+            {t.nav.cta}
           </Link>
 
           {/* Hamburger */}
@@ -289,29 +277,34 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div style={{ background: "white", borderTop: "1px solid #e4e4e7", padding: "0 24px 24px", maxHeight: "80vh", overflowY: "auto" }}>
-          <div style={{ paddingTop: 16, fontSize: 10, fontWeight: 800, color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Solutions</div>
+          <div style={{ paddingTop: 16, fontSize: 10, fontWeight: 800, color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>{t.nav.solutions}</div>
           {segments.map((s) => (
             <Link key={s.slug} href={`/${s.slug}`} onClick={() => setMenuOpen(false)}
               style={{ display: "block", padding: "10px 0", fontSize: 14, color: "#001012", fontWeight: 600, borderBottom: "1px solid #f4f4f5" }}>
-              {s.emoji} {s.name}
+              {s.name}
             </Link>
           ))}
-          <div style={{ paddingTop: 16, fontSize: 10, fontWeight: 800, color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8, marginTop: 8 }}>Produit</div>
+          <div style={{ paddingTop: 16, fontSize: 10, fontWeight: 800, color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8, marginTop: 8 }}>{t.nav.product}</div>
           {products.map((p) => (
             <Link key={p.slug} href={`/product/${p.slug}`} onClick={() => setMenuOpen(false)}
               style={{ display: "block", padding: "10px 0", fontSize: 14, color: "#001012", fontWeight: 600, borderBottom: "1px solid #f4f4f5" }}>
               {p.name}
             </Link>
           ))}
-          {["/use-cases", "/pricing", "/about", "/contact"].map((href) => (
-            <Link key={href} href={href} onClick={() => setMenuOpen(false)}
+          {[
+            { href: "/use-cases", label: t.nav.useCases },
+            { href: "/pricing", label: t.nav.pricing },
+            { href: "/about", label: t.nav.about },
+            { href: "/blog", label: t.nav.blog },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
               style={{ display: "block", padding: "10px 0", fontSize: 14, color: "#001012", fontWeight: 600, borderBottom: "1px solid #f4f4f5" }}>
-              {href.replace("/", "").replace("-", " ")}
+              {l.label}
             </Link>
           ))}
           <Link href="/contact" onClick={() => setMenuOpen(false)}
             style={{ display: "block", marginTop: 16, background: "#00493a", color: "white", padding: "12px 20px", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", textAlign: "center" }}>
-            Demander une démo
+            {t.nav.cta}
           </Link>
         </div>
       )}

@@ -85,12 +85,12 @@ export default function PricingPage() {
                   <div style={{ fontSize: "2.5rem", fontWeight: 800, color: plan.highlight ? "white" : "#001012", fontFamily: "monospace", letterSpacing: "-0.03em", lineHeight: 1, marginBottom: 6 }}>
                     {annual ? plan.annual : plan.monthly}
                   </div>
-                  <div style={{ fontSize: 12, color: plan.highlight ? "#52525b" : "#a1a1aa", marginBottom: 40 }}>{plan.sub}</div>
+                  <div style={{ fontSize: 12, color: plan.highlight ? "var(--text-muted-on-dark)" : "#a1a1aa", marginBottom: 40 }}>{plan.sub}</div>
                   <div style={{ flex: 1, borderTop: `1px solid ${plan.highlight ? "#27272a" : "#f4f4f5"}`, marginBottom: 32 }}>
                     {plan.features.map((feat, j) => (
                       <div key={j} style={{ display: "flex", gap: 10, padding: "10px 0", borderBottom: `1px solid ${plan.highlight ? "#18181b" : "#f4f4f5"}` }}>
                         <span style={{ color: plan.highlight ? "#00c896" : "#00493a", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}>✓</span>
-                        <span style={{ fontSize: 13, color: plan.highlight ? "#a1a1aa" : "#52525b" }}>{feat}</span>
+                        <span style={{ fontSize: 13, color: plan.highlight ? "var(--text-muted-on-dark)" : "#52525b" }}>{feat}</span>
                       </div>
                     ))}
                   </div>

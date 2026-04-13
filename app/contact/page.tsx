@@ -84,7 +84,7 @@ export default function ContactPage() {
               </div>
 
               <div style={{ marginTop: 16, background: "#001012", border: "1px solid #18181b", padding: "36px 40px" }}>
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#3f3f46", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 20 }}>
+                <div style={{ fontSize: 11, fontWeight: 800, color: "var(--on-dark-strip-label)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 20 }}>
                   Ce que vous obtenez
                 </div>
                 {[
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: 10, padding: "8px 0", borderBottom: "1px solid #18181b" }}>
                     <span style={{ color: "#00c896", fontWeight: 800, fontSize: 11, paddingTop: 2, flexShrink: 0 }}>✓</span>
-                    <span style={{ fontSize: 13, color: "#52525b", lineHeight: 1.55 }}>{item}</span>
+                    <span style={{ fontSize: 13, color: "var(--text-muted-on-dark)", lineHeight: 1.55 }}>{item}</span>
                   </div>
                 ))}
               </div>

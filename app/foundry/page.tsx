@@ -31,9 +31,9 @@ export default function FoundryPage() {
         <section style={{ background: "#001012", padding: "48px 0", borderBottom: "1px solid #18181b" }}>
           <div className="container">
             <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-              <span style={{ fontSize: 11, fontWeight: 800, color: "#3f3f46", textTransform: "uppercase", letterSpacing: "0.1em", marginRight: 8 }}>Utilisé par</span>
+              <span style={{ fontSize: 11, fontWeight: 800, color: "var(--on-dark-strip-label)", textTransform: "uppercase", letterSpacing: "0.1em", marginRight: 8 }}>Utilisé par</span>
               {["CIA / US DoD", "NHS Royaume-Uni", "Airbus", "BP", "US Army", "Armée française"].map((name) => (
-                <span key={name} style={{ padding: "5px 14px", border: "1px solid #27272a", fontSize: 12, fontWeight: 700, color: "#52525b", letterSpacing: "0.04em" }}>{name}</span>
+                <span key={name} style={{ padding: "5px 14px", border: "1px solid #27272a", fontSize: 12, fontWeight: 700, color: "var(--on-dark-strip-body)", letterSpacing: "0.04em" }}>{name}</span>
               ))}
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function FoundryPage() {
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: "#001012", marginBottom: 24 }}>Le problème</h3>
                   {["Données envoyées chez OpenAI / Anthropic", "Pas d'ontologie structurée", "Pas d'audit trail", "Tout oublié à chaque session", "Conformité RGPD douteuse", "Sécurité consumer-grade"].map((item, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #f4f4f5" }}>
-                      <span style={{ color: "#a1a1aa", fontWeight: 700, fontSize: 12, paddingTop: 1 }}>✕</span>
+                      <span style={{ color: "#a1a1aa", fontWeight: 700, fontSize: 12, paddingTop: 1 }}></span>
                       <span style={{ fontSize: 14, color: "#71717a" }}>{item}</span>
                     </div>
                   ))}
@@ -61,7 +61,7 @@ export default function FoundryPage() {
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: "#001012", marginBottom: 24 }}>La différence</h3>
                   {["Données 100% souveraines — zéro exfiltration", "Ontologie cumulative deal après deal", "Audit trail complet et exportable", "Mémoire institutionnelle persistante", "RGPD & AI Act natifs", "Sécurité grade gouvernemental"].map((item, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #f4f4f5" }}>
-                      <span style={{ color: "#00493a", fontWeight: 700, fontSize: 12, paddingTop: 1 }}>✓</span>
+                      <span style={{ color: "#00493a", fontWeight: 700, fontSize: 12, paddingTop: 1 }}></span>
                       <span style={{ fontSize: 14, color: "#001012" }}>{item}</span>
                     </div>
                   ))}

@@ -1,0 +1,9 @@
+<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document shape with folded top-right corner -->
+  <polygon points="0,0 15,0 22,7 22,24 0,24" fill="#001012"/>
+  <!-- Corner fold accent in green -->
+  <polyline points="15,0 15,7 22,7" fill="none" stroke="#00493a" stroke-width="1.5"/>
+  <!-- Data lines -->
+  <rect x="4" y="11" width="11" height="2" fill="#00493a"/>
+  <rect x="4" y="15.5" width="8" height="1.5" fill="#00493a" opacity="0.55"/>
+</svg>

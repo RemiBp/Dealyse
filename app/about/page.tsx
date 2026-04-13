@@ -44,9 +44,9 @@ export default function AboutPage() {
             <div>
               <span className="label" style={{ display: "block", marginBottom: 16 }}>Roadmap</span>
               {[
-                { period: "An 1", label: "DEALYSE via 10x Partners", desc: "5 à 10 fonds clients, 500k€ ARR. Offre proposée aux clients Foundry existants." },
-                { period: "An 2", label: "Spinoff indépendant", desc: "Levée seed 1–2M€, 10 à 30 clients, 2M€ ARR. DEALYSE comme produit autonome." },
-                { period: "An 3", label: "Expansion US / MENA", desc: "100+ clients, exit ou Série A. Infrastructure Foundry multi-régions." },
+                { period: "2026", label: "Premiers déploiements enterprise", desc: "Déploiement auprès de fonds PE, boutiques M&A et cabinets d'avocats en France et en Europe. Construction de l'ontologie M&A de référence." },
+                { period: "2027", label: "Expansion européenne", desc: "Ouverture aux marchés DACH, Benelux et UK. Intégrations Bloomberg, Datasite et VDR majeurs. Certifications SOC 2." },
+                { period: "2028", label: "Déploiement global", desc: "Présence US et MENA. Infrastructure Palantir Foundry multi-régions. DEALYSE comme standard du M&A augmenté." },
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", gap: 20, padding: "24px 0", borderBottom: "1px solid #e4e4e7" }}>
                   <span style={{ fontFamily: "monospace", fontSize: 11, fontWeight: 800, color: "#00493a", minWidth: 40, paddingTop: 2 }}>{item.period}</span>
