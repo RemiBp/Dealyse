@@ -181,10 +181,73 @@ a { text-decoration: none; }
 /* Landing — segment solution cards */
 .segment-landing-card {
   display: block;
+  min-width: 0; /* grid/flex: évite colonne 0px + image fill invisible */
   background: #fff;
   border: 1px solid var(--border);
   text-decoration: none;
   transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.segment-landing-card__visual {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  min-height: 140px;
+  overflow: hidden;
+  background: #0a0a0b;
+}
+
+/* Next/Image wraps the img in a span; force it to fill the slot */
+.segment-landing-card__visual > span {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.segment-landing-card__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Solution tabs — même pattern (évite fill + grille) */
+.tab-content__visual {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a0b;
+}
+
+.tab-content__visual > span {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px;
+}
+
+.tab-content__visual img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .tab-content__visual {
+    min-height: 220px;
+  }
+  .tab-content__visual > span {
+    min-height: 220px;
+  }
+  .tab-content__visual img {
+    min-height: 220px;
+  }
 }
 .segment-landing-card:hover {
   border-color: var(--green);

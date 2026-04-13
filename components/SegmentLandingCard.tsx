@@ -21,33 +21,39 @@ export default function SegmentLandingCard({
         className="segment-landing-card"
         style={{ position: "relative", display: "block", overflow: "hidden" }}
       >
-        <div style={{ position: "relative", height: 140, width: "100%" }}>
+        <div className="segment-landing-card__visual">
           <Image
             src={s.image}
             alt={s.name}
-            fill
+            width={1200}
+            height={480}
             sizes="(max-width: 900px) 100vw, 33vw"
             style={{
-              objectFit: "cover",
               filter: "grayscale(100%) contrast(1.08) brightness(0.96)",
             }}
           />
           <div
+            aria-hidden
             style={{
               position: "absolute",
               inset: 0,
+              zIndex: 1,
               background:
                 "linear-gradient(180deg, transparent 35%, rgba(0,16,18,0.55) 100%)",
+              pointerEvents: "none",
             }}
           />
           <div
+            aria-hidden
             style={{
               position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
               height: 3,
+              zIndex: 2,
               background: "#00493a",
+              pointerEvents: "none",
             }}
           />
         </div>

@@ -60,14 +60,25 @@ export default function SolutionTabs() {
         {/* Tab content */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, border: "1px solid #e4e4e7", borderTop: "none" }} className="tab-content">
           {/* Image left */}
-          <div style={{ borderRight: "1px solid #e4e4e7", position: "relative", overflow: "hidden", minHeight: 360 }}>
+          <div className="tab-content__visual" style={{ borderRight: "1px solid #e4e4e7" }}>
             <Image
               src={product.image}
               alt={product.name}
-              fill
-              style={{ objectFit: "cover", filter: "grayscale(100%) contrast(1.05)", transition: "opacity 0.3s" }}
+              width={1200}
+              height={800}
+              sizes="(max-width: 900px) 100vw, 50vw"
+              style={{ filter: "grayscale(100%) contrast(1.05)", transition: "opacity 0.3s" }}
             />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 60%, white 100%)" }} />
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 1,
+                background: "linear-gradient(to right, transparent 60%, white 100%)",
+                pointerEvents: "none",
+              }}
+            />
           </div>
 
           {/* Content right */}
