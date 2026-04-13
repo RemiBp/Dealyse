@@ -42,29 +42,19 @@ export default function ProductPageTemplate({ p }: { p: Product }) {
         </section>
       )}
 
-      {/* Screenshot — bandeau compact (crop, pas hauteur pleine image) */}
-      <section style={{ background: "#0a0a0b", padding: "36px 0", borderBottom: "1px solid #18181b" }}>
-        <div className="container">
-          <div style={{ border: "1px solid #18181b", overflow: "hidden", position: "relative" }}>
-            {/* Browser chrome */}
-            <div style={{ background: "#111113", borderBottom: "1px solid #18181b", padding: "7px 12px", display: "flex", alignItems: "center", gap: 6 }}>
-              <div style={{ display: "flex", gap: 4 }}>
-                {["#ff5f57","#febc2e","#28c840"].map(c => <div key={c} style={{ width: 8, height: 8, borderRadius: "50%", background: c }} />)}
-              </div>
-              <div style={{ flex: 1, background: "#1a1a1c", padding: "2px 8px", fontSize: 10, color: "#a8b0bc", maxWidth: 280, margin: "0 auto", textAlign: "center" }}>
-                dealyse.pro — {p.name}
-              </div>
-            </div>
-            <div className="product-screenshot__media">
-              <Image
-                src={p.image}
-                alt={p.name}
-                fill
-                sizes="(max-width: 900px) 100vw, min(1120px, 92vw)"
-                style={{ filter: "grayscale(100%) contrast(1.05) brightness(0.95)" }}
-              />
-            </div>
-          </div>
+      {/* Bandeau visuel — pleine largeur, noir uni */}
+      <section
+        className="product-screenshot-banner"
+        style={{ background: "#000000", padding: "48px 0", borderBottom: "1px solid #141414" }}
+      >
+        <div className="product-screenshot__media product-screenshot__media--banner">
+          <Image
+            src={p.image}
+            alt={p.name}
+            fill
+            sizes="100vw"
+            style={{ filter: "grayscale(100%) contrast(1.05) brightness(0.92)" }}
+          />
         </div>
       </section>
 

@@ -250,13 +250,23 @@ a { text-decoration: none; }
   }
 }
 
-/* Product page — aperçu navigateur (hauteur bornée, crop propre) */
+/* Product page — bandeau image (noir) */
+.product-screenshot-banner {
+  width: 100%;
+}
+
 .product-screenshot__media {
   position: relative;
   width: 100%;
   height: clamp(200px, 28vh, 320px);
   overflow: hidden;
-  background: #050506;
+  background: #000000;
+}
+
+.product-screenshot__media--banner {
+  max-width: 100%;
+  margin: 0 auto;
+  height: clamp(220px, 30vh, 340px);
 }
 
 .product-screenshot__media > span {
