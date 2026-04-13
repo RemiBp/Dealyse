@@ -249,6 +249,26 @@ a { text-decoration: none; }
     min-height: 220px;
   }
 }
+
+/* Product page — aperçu navigateur (hauteur bornée, crop propre) */
+.product-screenshot__media {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 28vh, 320px);
+  overflow: hidden;
+  background: #050506;
+}
+
+.product-screenshot__media > span {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.product-screenshot__media img {
+  object-fit: cover;
+  object-position: center top;
+}
 .segment-landing-card:hover {
   border-color: var(--green);
   box-shadow: 0 20px 56px rgba(0, 16, 18, 0.09);

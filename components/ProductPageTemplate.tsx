@@ -42,20 +42,28 @@ export default function ProductPageTemplate({ p }: { p: Product }) {
         </section>
       )}
 
-      {/* Screenshot */}
-      <section style={{ background: "#0a0a0b", padding: "64px 0", borderBottom: "1px solid #18181b" }}>
+      {/* Screenshot — bandeau compact (crop, pas hauteur pleine image) */}
+      <section style={{ background: "#0a0a0b", padding: "36px 0", borderBottom: "1px solid #18181b" }}>
         <div className="container">
           <div style={{ border: "1px solid #18181b", overflow: "hidden", position: "relative" }}>
             {/* Browser chrome */}
-            <div style={{ background: "#111113", borderBottom: "1px solid #18181b", padding: "10px 16px", display: "flex", alignItems: "center", gap: 8 }}>
-              <div style={{ display: "flex", gap: 5 }}>
-                {["#ff5f57","#febc2e","#28c840"].map(c => <div key={c} style={{ width: 10, height: 10, borderRadius: "50%", background: c }} />)}
+            <div style={{ background: "#111113", borderBottom: "1px solid #18181b", padding: "7px 12px", display: "flex", alignItems: "center", gap: 6 }}>
+              <div style={{ display: "flex", gap: 4 }}>
+                {["#ff5f57","#febc2e","#28c840"].map(c => <div key={c} style={{ width: 8, height: 8, borderRadius: "50%", background: c }} />)}
               </div>
-              <div style={{ flex: 1, background: "#1a1a1c", padding: "3px 10px", fontSize: 11, color: "#a8b0bc", maxWidth: 300, margin: "0 auto", textAlign: "center" }}>
+              <div style={{ flex: 1, background: "#1a1a1c", padding: "2px 8px", fontSize: 10, color: "#a8b0bc", maxWidth: 280, margin: "0 auto", textAlign: "center" }}>
                 dealyse.pro — {p.name}
               </div>
             </div>
-            <Image src={p.image} alt={p.name} width={1200} height={600} style={{ width: "100%", height: "auto", filter: "grayscale(100%) contrast(1.05) brightness(0.95)", display: "block" }} />
+            <div className="product-screenshot__media">
+              <Image
+                src={p.image}
+                alt={p.name}
+                fill
+                sizes="(max-width: 900px) 100vw, min(1120px, 92vw)"
+                style={{ filter: "grayscale(100%) contrast(1.05) brightness(0.95)" }}
+              />
+            </div>
           </div>
         </div>
       </section>
