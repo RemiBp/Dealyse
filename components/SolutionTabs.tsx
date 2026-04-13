@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/content/products";
 import { useLang } from "@/lib/i18n";
-import HowItWorksBand from "./HowItWorksBand";
 
 const tabSlugs = ["due-diligence", "deal-management", "modelling", "reporting", "security"] as const;
 
@@ -19,9 +18,8 @@ export default function SolutionTabs() {
   return (
     <section style={{ background: "white", padding: "56px 0 120px", borderBottom: "1px solid #e4e4e7" }}>
       <div className="container">
-        <HowItWorksBand compact />
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 56, flexWrap: "wrap", gap: 16 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, marginTop: 0, flexWrap: "wrap", gap: 16 }}>
           <div>
             <span className="label" style={{ display: "block", marginBottom: 16 }}>{tabs.label}</span>
             <h2 style={{ fontWeight: 500, letterSpacing: "-0.02em", maxWidth: 520 }}>{tabs.h2}</h2>
