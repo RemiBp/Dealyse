@@ -14,11 +14,11 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dealyse.pro"),
   title: {
-    default: "DEALYSE — Le Deal OS propulsé par Palantir Foundry",
+    default: "DEALYSE — Deal OS M&A sur Palantir Foundry",
     template: "%s — DEALYSE",
   },
   description:
-    "Analysez une data room complète en 4 heures. Due diligence financière, juridique et opérationnelle entièrement automatisée sur Palantir Foundry. Pour le M&A mid-market.",
+    "Data room, pipeline et livrables sur une plateforme souveraine. Due diligence et exécution deal accélérées sur Palantir Foundry — M&A mid-market.",
   keywords: [
     "due diligence IA", "deal management", "Palantir Foundry", "M&A software",
     "private equity tools", "investment banking", "LBO model", "IC memo", "data room",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   authors: [{ name: "DEALYSE", url: "https://dealyse.pro" }],
   creator: "DEALYSE",
   openGraph: {
-    title: "DEALYSE — Le Deal OS propulsé par Palantir Foundry",
+    title: "DEALYSE — Deal OS M&A sur Palantir Foundry",
     description:
-      "Des semaines de travail. En quelques minutes. Due diligence complète en 4h sur Palantir Foundry.",
+      "Des semaines de travail. En quelques minutes. DD, pipeline et comité — une couche unique sur Palantir Foundry.",
     url: "https://dealyse.pro",
     siteName: "DEALYSE",
     locale: "fr_FR",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DEALYSE — Le Deal OS propulsé par Palantir Foundry",
-    description: "Due diligence M&A en 4 heures. Propulsé par Palantir Foundry.",
+    title: "DEALYSE — Deal OS M&A sur Palantir Foundry",
+    description: "Due diligence et exécution deal accélérées. Plateforme souveraine Palantir Foundry.",
     creator: "@dealyse",
   },
   robots: {

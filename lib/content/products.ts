@@ -15,7 +15,7 @@ export const products: Product[] = [
     slug: "due-diligence",
     name: "Due Diligence IA",
     headline: "De 6 semaines à 4 heures.",
-    sub: "La due diligence la plus complète du marché — entièrement automatisée sur Palantir Foundry.",
+    sub: "La due diligence la plus complète du marché — accélérée et orchestrée sur Palantir Foundry.",
     scenario: "Il est 9h du matin. Une data room de 800 documents vient d'être partagée. Sans DEALYSE : quatre cabinets mobilisés, six semaines de travail, 150 000€ de frais. Avec DEALYSE : quatre agents IA en parallèle analysent la data room. À 13h, votre rapport de DD est prêt.",
     steps: [
       {
