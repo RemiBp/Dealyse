@@ -107,7 +107,7 @@ export default function AboutPage() {
             <div>
               <span style={{ display: "block", fontSize: "0.65rem", fontWeight: 800, color: "#00c896", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 16 }}>Palantir Partner</span>
               <h2 style={{ fontWeight: 500, color: "white", letterSpacing: "-0.02em", marginBottom: 20 }}>Partenaire officiel Palantir</h2>
-              <p style={{ fontSize: 15, color: "#52525b", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 15, color: "var(--text-muted-on-dark)", lineHeight: 1.65 }}>
                 10x Partners est un partenaire certifié Palantir Foundry. DEALYSE est construit sur cette relation — accès prioritaire aux dernières fonctionnalités AIP, support technique Palantir, crédibilité enterprise immédiate.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 <div key={i} style={{ background: "#0a0a0b", border: "1px solid #18181b", padding: "24px 20px", position: "relative" }}>
                   <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 2, background: i === 0 ? "#00493a" : "transparent" }} />
                   <div style={{ fontSize: 12, fontWeight: 700, color: "white", marginBottom: 6 }}>{item.title}</div>
-                  <div style={{ fontSize: 12, color: "#52525b" }}>{item.desc}</div>
+                  <div style={{ fontSize: 12, color: "var(--text-muted-on-dark)" }}>{item.desc}</div>
                 </div>
               ))}
             </div>

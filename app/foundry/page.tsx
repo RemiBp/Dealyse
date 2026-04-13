@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import DarkProofStrip from "@/components/DarkProofStrip";
 
 const faq = [
   { q: "Faut-il être client Palantir pour utiliser DEALYSE ?", a: "Non. Pour les plans Free et Pro, DEALYSE s'occupe de tout. L'option Enterprise permet un déploiement dans votre tenant Foundry si vous en avez déjà un." },
@@ -27,17 +28,12 @@ export default function FoundryPage() {
           </div>
         </section>
 
-        {/* References */}
-        <section style={{ background: "#001012", padding: "48px 0", borderBottom: "1px solid #18181b" }}>
-          <div className="container">
-            <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-              <span style={{ fontSize: 11, fontWeight: 800, color: "var(--on-dark-strip-label)", textTransform: "uppercase", letterSpacing: "0.1em", marginRight: 8 }}>Utilisé par</span>
-              {["CIA / US DoD", "NHS Royaume-Uni", "Airbus", "BP", "US Army", "Armée française"].map((name) => (
-                <span key={name} style={{ padding: "5px 14px", border: "1px solid #27272a", fontSize: 12, fontWeight: 700, color: "var(--on-dark-strip-body)", letterSpacing: "0.04em" }}>{name}</span>
-              ))}
-            </div>
-          </div>
-        </section>
+        <DarkProofStrip
+          label="Utilisé par"
+          variant="chips"
+          paddingY={48}
+          items={["CIA / US DoD", "NHS Royaume-Uni", "Airbus", "BP", "US Army", "Armée française"]}
+        />
 
         {/* Problem with classic AI */}
         <section style={{ background: "#fafafa", padding: "96px 0", borderBottom: "1px solid #e4e4e7" }}>

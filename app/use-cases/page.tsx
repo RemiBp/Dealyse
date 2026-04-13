@@ -116,7 +116,7 @@ export default function UseCasesPage() {
         <section style={{ background: "#001012", padding: "80px 0" }}>
           <div className="container" style={{ textAlign: "center" }}>
             <h2 style={{ fontWeight: 500, color: "white", letterSpacing: "-0.02em", marginBottom: 16 }}>Votre use case est ici.</h2>
-            <p style={{ fontSize: 15, color: "#52525b", marginBottom: 32 }}>Démarrez avec un POC gratuit sur votre prochain deal.</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted-on-dark)", marginBottom: 32 }}>Démarrez avec un POC gratuit sur votre prochain deal.</p>
             <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00493a", color: "white", padding: "13px 28px", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Demander une démo →
             </Link>

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SolutionTabs from "@/components/SolutionTabs";
 import SegmentLandingCard from "@/components/SegmentLandingCard";
+import DarkProofStrip from "@/components/DarkProofStrip";
 import { segments } from "@/lib/content/segments";
 import { useLang } from "@/lib/i18n";
 
@@ -89,15 +90,7 @@ export default function Home() {
         </section>
 
         {/* ─── 2. SOCIAL PROOF STRIP ──────────────────────────────── */}
-        <section style={{ background: "#001012", padding: "32px 0", borderBottom: "1px solid #18181b" }}>
-          <div className="container" style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: "var(--on-dark-strip-label)", textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>{p.proof.label}</span>
-            <div style={{ height: 1, flex: 1, background: "#18181b", minWidth: 20 }} />
-            {p.proof.items.map((name) => (
-              <span key={name} style={{ fontSize: 12, color: "var(--on-dark-strip-body)", fontWeight: 600 }}>{name}</span>
-            ))}
-          </div>
-        </section>
+        <DarkProofStrip label={p.proof.label} items={p.proof.items} variant="inline" paddingY={36} />
 
         {/* ─── 3. LE PROBLÈME + AVANT/APRÈS ───────────────────────── */}
         <section style={{ background: "#fafafa", padding: "120px 0", borderBottom: "1px solid #e4e4e7" }}>
